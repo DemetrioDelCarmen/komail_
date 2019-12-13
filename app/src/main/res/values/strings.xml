@@ -15,4 +15,8 @@
     <string name="extestado">Estado</string>
     <string name="txt_cambiar">Cambiar</string>
     <string name="txt_coprar_ya">¡Comprar ya!</string>
+
+    <string name="text_repartidor_tortillas">¿Tienes una tortillería o eres repartidor?</string>
+    <string name="buscas_trabajo">Obtén ingresos extra repartiendo con Komail</string>
+    <string name="komail">Komail</string>
 </resources>

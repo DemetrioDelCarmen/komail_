@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+
+    <color name="colorPrimary">#CF1553</color>
+    <color name="colorPrimaryDark">#7C0225</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="secundary_color_hint">#fff</color>
+    <color name="white">#fff</color>
+    <color name="amarillo">#FFC72C</color>
+    <color name="anuncio">#00820C</color>
+    <color name="rojo">#DA291C</color>
+    <color name="text_generals">#585858</color>
+
 </resources>
