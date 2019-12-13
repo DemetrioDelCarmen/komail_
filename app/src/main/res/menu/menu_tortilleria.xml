@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_repartidores"
+        android:icon="@drawable/ic_repartidor"
+        android:title="@string/txt_repartidores" />
+
+    <item
+        android:id="@+id/navigation_mapa"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="@string/txt_mapa" />
+
+
+    <item
+        android:id="@+id/navigation_ajustes"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/txt_ajustes" />
+</menu>

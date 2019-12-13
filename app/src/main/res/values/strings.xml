@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Komali</string>
+    <string name="txt_repartidores">Repartidores</string>
+    <string name="txt_mapa">Mapa</string>
+    <string name="txt_ajustes">Ajustes</string>
+    <string name="txt_tortilleria">Tortilleria</string>
+    <string name="txt_tel_fono">Teléfono</string>
+    <string name="txt_correo">Correo</string>
+    <string name="txt_precio">Precio kg.</string>
+    <string name="txt_definir_ruta">Definir ruta</string>
+    <string name="txt_contrase_a">Contraseña</string>
+    <string name="txt_nombre">Nombre</string>
+    <string name="tel_fono">Teléfono</string>
+    <string name="txt_agregar">Agregar</string>
+    <string name="extestado">Estado</string>
+    <string name="txt_cambiar">Cambiar</string>
+    <string name="txt_coprar_ya">¡Comprar ya!</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_repartidores">
+
+    <fragment
+        android:id="@+id/navigation_repartidores"
+        android:name="mx.com.david.komali.tortilleria.Fragment_repartidores"
+        android:label="@string/txt_repartidores"
+        tools:layout="@layout/fragment_repartidores" />
+
+    <fragment
+        android:id="@+id/navigation_ajustes"
+        android:name="mx.com.david.komali.tortilleria.Fragment_ajustes"
+        android:label="@string/txt_ajustes"
+        tools:layout="@layout/fragment_ajustes" />
+
+    <fragment
+        android:id="@+id/navigation_mapa"
+        android:name="mx.com.david.komali.tortilleria.Fragment_mapa"
+        android:label="@string/txt_mapa"
+        tools:layout="@layout/fragment_mapa" />
+</navigation>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InicioSesion">
+
+    <LinearLayout
+        android:id="@+id/card_login"
+        android:layout_width="367dp"
+        android:layout_height="216dp"
+        android:orientation="vertical"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="48dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_correo" />
+
+        <EditText
+            android:id="@+id/log_edt_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_contrase_a" />
+
+        <EditText
+            android:id="@+id/log_edt_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btn_login_iniciar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Iniciar" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_cliente"
+        android:layout_width="315dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="256dp"
+        android:text="@string/txt_coprar_ya"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ir_repartidor"
+        android:layout_width="111dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/txt_repartidores"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ir_tortilleria"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btn_ir_tortilleria"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:text="@string/txt_tortilleria"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="523dp" />
+
+    <Button
+        android:id="@+id/btn_socio"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="¿Tienes tortillería\nó\nEres repartidor?"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cliente" />
+
+    <Button
+        android:id="@+id/btn_atras"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Quieres pedir tortillas?"
+        android:textColor="@color/colorAccent"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cliente" />
+</androidx.constraintlayout.widget.ConstraintLayout>

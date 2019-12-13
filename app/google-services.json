@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1131339984",
+    "firebase_url": "https://komali-4e030.firebaseio.com",
+    "project_id": "komali-4e030",
+    "storage_bucket": "komali-4e030.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1131339984:android:b416d9b09057fc9bbcbed5",
+        "android_client_info": {
+          "package_name": "mx.com.david.komali"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1131339984-id26cpddftu06429rb72ro5rlrkk7vlg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "mx.com.david.komali",
+            "certificate_hash": "397bdaefd35a73d528b9f4083d7e95a399d3b789"
+          }
+        },
+        {
+          "client_id": "1131339984-omd50ksk2b33pn0eibvh5rf760b1tg11.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASjyD6gD_sgFND8VNh-PnOwPEv8WFboF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1131339984-omd50ksk2b33pn0eibvh5rf760b1tg11.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
