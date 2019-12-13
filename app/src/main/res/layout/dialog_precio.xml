@@ -13,21 +13,31 @@
             android:id="@+id/btn_restar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="-" />
+            android:background="@drawable/button_rounded_red"
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
 
         <TextView
             android:id="@+id/edt_precio_modificar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="TextView" />
+            android:text="TextView"
+            android:textSize="24dp" />
 
         <Button
             android:id="@+id/btn_sumar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:text="+" />
+            android:background="@drawable/button_rounded_red"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
     </LinearLayout>
 </LinearLayout>

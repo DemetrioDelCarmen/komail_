@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".tortilleria.Opciones_repartidor">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <LinearLayout
@@ -20,47 +21,65 @@
                 android:id="@+id/textView18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_weight="1"
-                android:text="@string/extestado" />
+                android:text="@string/extestado"
+                android:textSize="18dp" />
 
             <TextView
                 android:id="@+id/txt_or_estado"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:textSize="18dp" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/textView14"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/txt_nombre" />
+            android:layout_margin="10dp"
+            android:text="@string/txt_nombre"
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/txt_or_nombre"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
 
         <TextView
             android:id="@+id/textView16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/tel_fono" />
+            android:layout_margin="10dp"
+            android:text="@string/tel_fono"
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/txt_or_telefono"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnDefinirRuta"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="35dp"
-        android:background="?android:attr/windowBackground"
-        android:text="@string/txt_definir_ruta"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom|center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnDefinirRuta"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="35dp"
+            android:background="@drawable/button_rounded_red"
+            android:text="@string/txt_definir_ruta"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+    </LinearLayout>
+</LinearLayout>
