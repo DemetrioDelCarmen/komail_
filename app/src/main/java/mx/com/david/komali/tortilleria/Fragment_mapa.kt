@@ -42,7 +42,7 @@ class Fragment_mapa : Fragment(), OnMapReadyCallback, LocationListener {
     var altitude: Double = 0.0
     var longitude: Double = 0.0
 
-    lateinit var llave :String
+    lateinit var llave: String
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -50,7 +50,7 @@ class Fragment_mapa : Fragment(), OnMapReadyCallback, LocationListener {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_mapa, container, false)
-        llave =  activity!!.intent.getStringExtra("llaveTortilleria") as String
+        llave = activity!!.intent.getStringExtra("llaveTortilleria") as String
 
 
         FirebaseApp.initializeApp(cont)
@@ -61,17 +61,18 @@ class Fragment_mapa : Fragment(), OnMapReadyCallback, LocationListener {
         location = activity!!.getSystemService(Context.LOCATION_SERVICE) as LocationManager
 
 
-        val myMAPF = childFragmentManager.findFragmentById(R.id.mapatortilleria) as SupportMapFragment?
+        val myMAPF =
+            childFragmentManager.findFragmentById(R.id.mapatortilleria) as SupportMapFragment?
         myMAPF!!.getMapAsync(this)
 
         return view
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
-        Toast.makeText(cont, "onMapReady", Toast.LENGTH_SHORT).show()
+        // Toast.makeText(cont, "onMapReady", Toast.LENGTH_SHORT).show()
         mMap = googleMap
         // Add a marker in Sydney and move the camera
-      //  mMap.setMaxZoomPreference(18f) //Mayor numero más cerca
+        //  mMap.setMaxZoomPreference(18f) //Mayor numero más cerca
         //mMap.setMinZoomPreference(16f)
 
         mMap.isMyLocationEnabled = true
@@ -124,7 +125,13 @@ class Fragment_mapa : Fragment(), OnMapReadyCallback, LocationListener {
                         val p = h.getValue<Cliente>(Cliente::class.java)!!
                         if (p.posicion.latitude != 0.0 && 0.0 != p.posicion.longitude) {
                             latLng = LatLng(p.posicion.latitude, p.posicion.longitude)
-                            marca.add(mMap.addMarker(MarkerOptions().position(latLng).title(p.nombre).title("Cliente")))
+                            marca.add(
+                                mMap.addMarker(
+                                    MarkerOptions().position(latLng).title(p.nombre).title(
+                                        "Cliente"
+                                    )
+                                )
+                            )
 
                             println(p.nombre)
                             println(p.posicion.latitude)
@@ -204,5 +211,5 @@ class Fragment_mapa : Fragment(), OnMapReadyCallback, LocationListener {
     }
 
 
-    }
+}
 

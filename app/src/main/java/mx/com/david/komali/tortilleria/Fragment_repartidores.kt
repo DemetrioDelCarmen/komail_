@@ -81,11 +81,11 @@ class Fragment_repartidores : Fragment() {
                         if (arr.size >= 5) {
                             btn_agregar_repartidor.visibility = View.GONE
                         } else {
-                            /* btn_agregar_repartidor.setOnClickListener {
+                            btn_agregar_repartidor.setOnClickListener {
                                 val intent = Intent(cont, AgregarRepartidor::class.java)
                                 intent.putExtra("llaveTortilleria", llave)
                                 startActivity(intent)
-                            }*/
+                            }
 
                             btn_agregar_repartidor.visibility = View.VISIBLE
                         }

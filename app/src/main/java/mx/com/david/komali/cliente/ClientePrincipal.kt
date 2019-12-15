@@ -68,10 +68,15 @@ class ClientePrincipal : AppCompatActivity(), LocationListener {
                 .addListenerForSingleValueEvent(object :
                     ValueEventListener {
                     override fun onDataChange(dataSnapshot: DataSnapshot) {
-                        if(dataSnapshot.exists()){
+                        if (dataSnapshot.exists()) {
                             val value = dataSnapshot.getValue<Posicion>(Posicion::class.java)!!
                             mMap.addMarker(
-                                MarkerOptions().position(LatLng(value.latitude, value.longitude)).title(
+                                MarkerOptions().position(
+                                    LatLng(
+                                        value.latitude,
+                                        value.longitude
+                                    )
+                                ).title(
                                     "Mi posicion"
                                 )
                             )
@@ -150,42 +155,48 @@ class ClientePrincipal : AppCompatActivity(), LocationListener {
     }
 
 
-
     val repartidorActual = arrayListOf<Marker>()
     val repa = arrayListOf<Marker>()
 
     fun marcarReaprtidor() {
-        myRef.child("repartidores").addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(p0: DatabaseError) {
-            }
+        try {
+            myRef.child("repartidores").addValueEventListener(object : ValueEventListener {
+                override fun onCancelled(p0: DatabaseError) {
+                }
 
-            override fun onDataChange(p0: DataSnapshot) {
-                if (p0.exists()) {
-                    for (i in repartidorActual) {
-                        i.remove()
-                    }
-                    var latLng: LatLng
-                    for (h in p0.children) {
-                        val p = h.getValue<Repartidor>(Repartidor::class.java)!!
-                        if (p.posicion.latitude != 0.0 && 0.0 != p.posicion.longitude) {
-                            latLng = LatLng(p.posicion.latitude, p.posicion.longitude)
-                            repa.add(
-                                mMap.addMarker(
-                                    MarkerOptions().position(latLng).title("Repartidor ${p.nombre}").icon(
-                                        BitmapDescriptorFactory.defaultMarker(
-                                            BitmapDescriptorFactory.HUE_GREEN
+                override fun onDataChange(p0: DataSnapshot) {
+                    try {
+                        if (p0.exists()) {
+                            for (i in repartidorActual) {
+                                i.remove()
+                            }
+                            var latLng: LatLng
+                            for (h in p0.children) {
+                                val p = h.getValue<Repartidor>(Repartidor::class.java)!!
+                                if (p.posicion.latitude != 0.0 && 0.0 != p.posicion.longitude) {
+                                    latLng = LatLng(p.posicion.latitude, p.posicion.longitude)
+                                    repa.add(
+                                        mMap.addMarker(
+                                            MarkerOptions().position(latLng).title("Repartidor ${p.nombre}").icon(
+                                                BitmapDescriptorFactory.defaultMarker(
+                                                    BitmapDescriptorFactory.HUE_GREEN
+                                                )
+                                            )
                                         )
                                     )
-                                )
-                            )
+                                }
+                            }
+                            repartidorActual.clear()
+                            repartidorActual.addAll(repa)
                         }
-                    }
-                    repartidorActual.clear()
-                    repartidorActual.addAll(repa)
+                    } catch (e: Exception) {
 
+                    }
                 }
-            }
-        })
+            })
+        } catch (e: Exception) {
+
+        }
     }
 
     override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {

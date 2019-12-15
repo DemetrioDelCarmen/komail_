@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".cliente.ClientePrincipal"></activity>
+        <activity android:name=".tortilleria.AgregarRepartidor"></activity>
+        <activity android:name=".cliente.ClientePrincipal" />
         <activity android:name=".repartidor.RepartidorPrincipal" />
         <activity android:name=".tortilleria.TortilleriaPrincipal" />
         <activity android:name=".tortilleria.Opciones_repartidor" />
